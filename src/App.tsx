@@ -1,11 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Chat from './components/chat';
+import Board from './components/board';
 
 function App() {
+	
 	return (
-		<Chat/>
+		<Board/>
 		// <div className="App">
 		// 	<header className="App-header">
 		// 		<img src={logo} className="App-logo" alt="logo" />

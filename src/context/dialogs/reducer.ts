@@ -1,22 +1,22 @@
 import { ADD_MESSAGE, AddNewMessage } from './types';
 import { v4 as uuidv4 } from 'uuid';
-
-const id1 = uuidv4();
-const id2 = uuidv4();
-const id3 = uuidv4();
-const id4 = uuidv4();
+import { id1, id2, id3, id4 } from '../chat/reducer';
 
 type DialogType = { id: String, message: String, owner: String }
 
 export type dialogStateType = {
-	// chats: Array<ChatType>
 	[key: string]: Array<DialogType>
 }
 
 type dialogActionType = AddNewMessage
 
 export const dialogInitialState: dialogStateType = {
-	// id1: [{id: '1', message: 'String', owner: 'Vasyl'}]
+	// [id1]: [{id: '1', message: 'Some message', owner: 'Vasyl'}, {id: '2', message: 'henlo', owner: 'SomeCoolName'}],
+	// [id2]: [{id: '3', message: 'holla', owner: 'Vasyl'}, {id: '4', message: 'henlo', owner: 'TestUserName'}],
+	[id1]: [],
+	[id2]: [],
+	[id3]: [],
+	[id4]: []
 }
 
 export const dialogReducer = (state: dialogStateType = dialogInitialState, action: dialogActionType) => {
